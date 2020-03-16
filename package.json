@@ -1,0 +1,39 @@
+{
+  "name": "nativescript-plugin-universal-links",
+  "version": "1.0.0",
+  "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
+  "main": "build/plugin-universal-links",
+  "typings": "build/plugin-universal-links.common.d.ts",
+  "nativescript": {
+    "platforms": {
+      "android": "6.0.0",
+      "ios": "6.0.1"
+    }
+  },
+  "scripts": {
+    "build": "npx rimraf build/ && npx tsc -p tsconfig.json && npx tns plugin build",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "nativescript",
+    "plugin",
+    "ios",
+    "android",
+    "universal",
+    "link",
+    "deeplink"
+  ],
+  "author": "Dragos Sebestin",
+  "license": "MIT",
+  "repository": "https://github.com/sebestindragos/nativescript-plugin-universal-links",
+  "devDependencies": {
+    "nativescript": "6.4.1",
+    "rimraf": "3.0.2",
+    "tns-core-modules": "6.4.2",
+    "tns-platform-declarations": "6.4.2",
+    "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "url-parse": "1.4.7"
+  }
+}
