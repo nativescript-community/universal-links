@@ -11,7 +11,7 @@ export class UniversalLink {
     [key: string]: string;
   };
   constructor(link: string) {
-    const url = urlparse(link);
+    const url = urlparse(link, true);
 
     this.href = url.href;
     this.origin = url.origin;
