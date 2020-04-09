@@ -1,6 +1,6 @@
 {
   "name": "nativescript-plugin-universal-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
   "main": "build/plugin-universal-links",
   "typings": "build/plugin-universal-links.common.d.ts",
