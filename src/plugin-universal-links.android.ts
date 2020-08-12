@@ -17,7 +17,6 @@ application.android.on(
     const intent: android.content.Intent = args.activity.getIntent();
     try {
       const data = intent.getData();
-      console.log(data);
       if (!data) return; // nothing to do
 
       setUniversalLink(data.toString());
