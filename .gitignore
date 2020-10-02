@@ -1,3 +1,8 @@
 node_modules/
 .vscode/
 build/
+src/*.js
+src/*.map
+src/*.d.ts
+package-lock.json
+*.tgz
