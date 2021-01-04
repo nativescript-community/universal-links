@@ -1,4 +1,6 @@
-build/*.map
+*.map
+*.ts
+!*.d.ts
 tsconfig.json
 scripts/*
 platforms/android/*
@@ -8,3 +10,4 @@ platforms/android/*
 src/
 .vscode/
 .DS_Store
+*.tgz

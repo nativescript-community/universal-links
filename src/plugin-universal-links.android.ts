@@ -1,6 +1,4 @@
-/// <reference path="../node_modules/tns-platform-declarations/android.d.ts" />
-
-import * as application from "tns-core-modules/application";
+import { Application, AndroidApplication } from "@nativescript/core";
 import {
   setUniversalLink,
   getUniversalLink,
@@ -11,8 +9,8 @@ export {
   registerUniversalLinkCallback
 } from "./plugin-universal-links.common";
 
-application.android.on(
-  application.AndroidApplication.activityNewIntentEvent,
+Application.android.on(
+  AndroidApplication.activityNewIntentEvent,
   args => {
     const intent: android.content.Intent = args.activity.getIntent();
     try {
