@@ -1,36 +1,36 @@
 {
-  "name": "@nativescript-community/universal-links",
-  "version": "2.0.0",
-  "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
-  "main": "./universal-links",
-  "module": "./universal-links.mjs",
-  "sideEffects": false,
-  "typings": "./universal-links-common.d.ts",
-  "nativescript": {
-      "platforms": {
-          "android": "6.0.0",
-          "ios": "6.0.0"
-      }
-  },
-  "keywords": [
-      "NativeScript",
-      "JavaScript",
-      "Android",
-      "iOS",
-      "universal",
-      "link",
-      "deeplink"
-  ],
-  "author": {
-      "name": "Dragos Sebestin"
-  },
-  "bugs": {
-      "url": "https://github.com/nativescript-community/universal-links/issues"
-  },
-  "repository": {
-      "type": "git",
-      "url": "https://github.com/nativescript-community/universal-links"
-  },
-  "license": "Apache-2.0",
-  "readmeFilename": "README.md"
+    "name": "@nativescript-community/universal-links",
+    "version": "2.1.0",
+    "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
+    "main": "./universal-links",
+    "module": "./universal-links.mjs",
+    "sideEffects": false,
+    "typings": "./universal-links-common.d.ts",
+    "nativescript": {
+        "platforms": {
+            "android": "6.0.0",
+            "ios": "6.0.0"
+        }
+    },
+    "keywords": [
+        "NativeScript",
+        "JavaScript",
+        "Android",
+        "iOS",
+        "universal",
+        "link",
+        "deeplink"
+    ],
+    "author": {
+        "name": "Dragos Sebestin"
+    },
+    "bugs": {
+        "url": "https://github.com/nativescript-community/universal-links/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nativescript-community/universal-links"
+    },
+    "license": "Apache-2.0",
+    "readmeFilename": "README.md"
 }
