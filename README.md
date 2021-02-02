@@ -1,4 +1,4 @@
-# Nativescript plugin Universal Links
+# NativeScript Universal Links
 
 Universal links (IOS) and App Links (Android) support for NativeScript apps.
 
