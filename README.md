@@ -7,7 +7,8 @@ When a user clicks a link to a website, it opens in the default web browser (Saf
 Apple calls this _Universal Links_ and Google calls it _App Links_, but they mean the same thing.
 
 Install this plugin using:
-`npm install nativescript-plugin-universal-links`
+
+`ns plugin add @nativescript-community/universal-links`
 
 ## Implementing Universal Links
 
