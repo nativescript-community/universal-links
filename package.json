@@ -14,7 +14,7 @@
     "scripts": {
         "build": "rm -f .tsbuildinfo && npm run tsc",
         "commitmsg": "commitlint -e $GIT_PARAMS",
-        "publish": "npm run setup && npm run build && npm run build.angular && lerna publish --create-release=github",
+        "publish": "npm run setup && npm run build && lerna publish --create-release=github",
         "setup": "ts-patch install",
         "tsc": "cpy '**/*.d.ts' '../plugin' --parents --cwd=src && tsc -skipLibCheck -d"
     },
