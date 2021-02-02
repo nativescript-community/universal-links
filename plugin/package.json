@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/universal-links",
-    "version": "2.1.0",
+    "version": "2.0.1",
     "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
     "main": "./universal-links",
     "module": "./universal-links.mjs",
@@ -32,5 +32,6 @@
         "url": "https://github.com/nativescript-community/universal-links"
     },
     "license": "Apache-2.0",
-    "readmeFilename": "README.md"
+    "readmeFilename": "README.md",
+    "gitHead": "5344b9c4aad6e73e9264ddc10bc6922cbabe16b5"
 }
