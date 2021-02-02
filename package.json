@@ -1,0 +1,46 @@
+{
+    "name": "@nativescript-community/universal-links",
+    "version": "1.0.0",
+    "homepage": "https://github.com/nativescript-community/universal-links#readme",
+    "bugs": {
+        "url": "https://github.com/nativescript-community/universal-links/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nativescript-community/universal-links.git"
+    },
+    "license": "ISC",
+    "author": "",
+    "scripts": {
+        "build": "rm -f .tsbuildinfo && npm run tsc",
+        "commitmsg": "commitlint -e $GIT_PARAMS",
+        "publish": "npm run setup && npm run build && npm run build.angular && lerna publish --create-release=github",
+        "setup": "ts-patch install",
+        "tsc": "cpy '**/*.d.ts' '../plugin' --parents --cwd=src && tsc -skipLibCheck -d"
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "dependencies": {
+        "select-run": "^1.1.1",
+        "ts-node": "^9.0.0",
+        "url-parse": "1.4.7"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^11.0.0",
+        "@commitlint/config-conventional": "^11.0.0",
+        "@nativescript/core": "7.1.4",
+        "@nativescript/ios": "7.1.1",
+        "@nativescript/types-android": "~7.1.0",
+        "@nativescript/types-ios": "~7.1.0",
+        "@nativescript/webpack": "4.0.1",
+        "@types/node": "14.6.4",
+        "cpy-cli": "^3.1.1",
+        "lerna": "^3.22.1",
+        "rimraf": "^3.0.2",
+        "ts-patch": "^1.3.1",
+        "typescript": "4.0.5"
+    }
+}

@@ -1,14 +1,13 @@
-/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
-import { Application, AndroidApplication } from "@nativescript/core";
+﻿import { Application, AndroidApplication } from "@nativescript/core";
 import {
   setUniversalLink,
   getUniversalLink,
   getRegisteredCallback
-} from "./plugin-universal-links.common";
+} from "./universal-links-common";
 export {
   getUniversalLink,
   registerUniversalLinkCallback
-} from "./plugin-universal-links.common";
+} from "./universal-links-common";
 
 Application.android.on(
   AndroidApplication.activityNewIntentEvent,
@@ -26,3 +25,4 @@ Application.android.on(
     }
   }
 );
+

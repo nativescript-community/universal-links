@@ -38,3 +38,4 @@ export function registerUniversalLinkCallback(cb: AppCallback) {
 export function getRegisteredCallback() {
   return callback;
 }
+

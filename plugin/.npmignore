@@ -1,0 +1,10 @@
+node_modules/
+src/
+bin/
+hooks/
+*.ts
+*.old
+tsconfig.json
+!*.d.ts
+*.aar
+*.jar
