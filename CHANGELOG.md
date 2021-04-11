@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/nativescript-community/universal-links/compare/v2.0.2...v2.0.3) (2021-04-11)
+
+
+### Bug Fixes
+
+* remove sideEffects flag ([f44aa6e](https://github.com/nativescript-community/universal-links/commit/f44aa6ed3e67d5ac7520e31d75361e4a60a18d40))
+
+
+
+
+
 ## [2.0.2](https://github.com/nativescript-community/universal-links/compare/v2.0.1...v2.0.2) (2021-02-03)
 
 
