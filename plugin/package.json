@@ -4,7 +4,6 @@
     "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
     "main": "./universal-links",
     "module": "./universal-links.mjs",
-    "sideEffects": false,
     "typings": "./universal-links-common.d.ts",
     "nativescript": {
         "platforms": {
