@@ -81,7 +81,7 @@ Call the `registerUniversalLinkCallback` in your AppComponent's ngOnInit method 
 
 ```js
 import { Component, OnInit } from "@angular/core";
-import { registerUniversalLinkCallback } from "nativescript-plugin-universal-links";
+import { registerUniversalLinkCallback } from "@nativescript-community/universal-links";
 
 @Component({
   selector: "my-app",
