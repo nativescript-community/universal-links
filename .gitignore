@@ -1,7 +1,7 @@
 # NativeScript
 hooks/
 node_modules/
-platforms/
+/platforms/
 
 # NativeScript Template
 *.js.map
@@ -35,18 +35,22 @@ devices.js
 *.framework
 **/*.js.map
 src/**/*.js
-plugin/**/*.js
-plugin/**/*.d.ts
+packages/**/*.js
+packages/**/*.d.ts
 bin
 build
 Pods
-!plugin/platforms
-/plugin/platforms/android/*.aar
+!packages/platforms
+/packages/**/*.aar
 *.xcuserdatad
-/plugin/README.md
-plugin/**/*js.map
-plugin/**/*js
-plugin/*.ngsummary.json
-plugin/*.metadata.json
-plugin/angular
+/packages/README.md
+packages/**/*js.map
+packages/**/*js
+packages/**/angular/*.json
+packages/*.ngsummary.json
+packages/*.metadata.json
+packages/angular
+packages/typings
 pnpm-lock.yaml
+
+/blueprint.md
