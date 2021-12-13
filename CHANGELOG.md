@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/nativescript-community/universal-links/compare/v2.0.4...v2.0.5) (2021-12-13)
+
+
+### Bug Fixes
+
+* url-parse version ([9b1a498](https://github.com/nativescript-community/universal-links/commit/9b1a498469c8f4d0e18fe783fb772703fb7e560e))
+
+
+
+
+
 ## [2.0.4](https://github.com/nativescript-community/universal-links/compare/v2.0.3...v2.0.4) (2021-12-11)
 
 **Note:** Version bump only for package @nativescript-community/universal-links
