@@ -34,6 +34,6 @@
     "readmeFilename": "README.md",
     "gitHead": "5344b9c4aad6e73e9264ddc10bc6922cbabe16b5",
     "dependencies": {
-        "url-parse": "1.4.7"
+        "url-parse": "~1.5.3"
     }
 }
