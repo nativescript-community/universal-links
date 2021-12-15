@@ -3,8 +3,7 @@
     "version": "2.0.5",
     "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
     "main": "./index",
-    "module": "./index.mjs",
-    "typings": "./index.d.ts",
+    "typings": "./index-common.d.ts",
     "scripts": {
         "build": "npm run tsc && npm run readme",
         "readme": "../../node_modules/.bin/readme generate -c ../../tools/readme/blueprint.json",

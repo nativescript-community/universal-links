@@ -1,5 +1,5 @@
 {
-	"readme": false,
+	"readme": true,
 	"angular": false,
 	"demos": [
 	    "vue"
