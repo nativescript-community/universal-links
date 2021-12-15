@@ -23,7 +23,10 @@
         "iOS",
         "universal",
         "link",
-        "deeplink"
+        "deeplink",
+        "vue.js",
+        "preview|https://raw.githubusercontent.com/nativescript-community/universal-links/master/images/demo-ios.gif|iOS Demo",
+        "preview|https://raw.githubusercontent.com/nativescript-community/universal-links/master/images/demo-android.gif|Android Demo"
     ],
     "author": {
         "name": "Dragos Sebestin"
