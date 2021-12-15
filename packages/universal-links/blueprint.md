@@ -1,36 +1,7 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-<!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      DO NOT EDIT THIS READEME DIRECTLY! Edit "bluesprint.md" instead.
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<h1 align="center">@nativescript-community/universal-links</h1>
-<p align="center">
-		<a href="https://npmcharts.com/compare/@nativescript-community/universal-links?minimal=true"><img alt="Downloads per month" src="https://img.shields.io/npm/dm/@nativescript-community/universal-links.svg" height="20"/></a>
-<a href="https://www.npmjs.com/package/@nativescript-community/universal-links"><img alt="NPM Version" src="https://img.shields.io/npm/v/@nativescript-community/universal-links.svg" height="20"/></a>
-	</p>
-
-<p align="center">
-  <b>Universal links (IOS) and App Links (Android) support for NativeScript.</b></br>
-  <sub><sub>
-</p>
-
-<br />
-
+{{ load:../../tools/readme/edit-warning.md }}
+{{ template:title }}
+{{ template:badges }}
+{{ template:description }}
 
 When a user clicks a link to a website, it opens in the default web browser (Safari/Chrome). Universal linking allows your app to open instead of the web browser.
 
@@ -40,41 +11,12 @@ Apple calls this _Universal Links_ and Google calls it _App Links_, but they mea
 | --- | ----------- |
 | iOS Demo | Android Demo |
 
-
-[](#table-of-contents)
-
-
-[](#table-of-contents)
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Implementing Universal Links](#implementing-universal-links)
-	* [iOS](#ios)
-	* [Android](#android)
-* [Usage](#usage)
-* [Demos and Development](#demos-and-development)
-	* [Setup](#setup)
-	* [Build](#build)
-	* [Demos](#demos)
-* [Questions](#questions)
-
-
-[](#installation)
-
-
-[](#installation)
+{{ template:toc }}
 
 ## Installation
 Run the following command from the root of your project:
 
-`ns plugin add @nativescript-community/universal-links`
-
-
-[](#implementing-universal-links)
-
-
-[](#implementing-universal-links)
+`ns plugin add {{ pkg.name }}`
 
 ## Implementing Universal Links
 
@@ -142,12 +84,6 @@ Add this code to your `App_Resources/Android/src/main/AndroidManifest.xml` file:
 </activity>
 ```
 
-
-[](#usage)
-
-
-[](#usage)
-
 ## Usage
 
 Call the `registerUniversalLinkCallback` somewhere in the startup of your app. This Angular example puts it in the AppComponent's ngOnInit method to provide a callback method which will receive an Universal Link object every time your app is opened by a website link:
@@ -191,53 +127,5 @@ const ul = getUniversalLink();
 ```
 
 
-
-[](#demos-and-development)
-
-
-[](#demos-and-development)
-
-## Demos and Development
-
-
-### Setup
-
-To run the demos, you must clone this repo **recursively**.
-
-```
-git clone https://github.com/@nativescript-community/universal-links.git --recursive
-```
-
-**Install Dependencies:**
-```bash
-npm i # or 'yarn install' or 'pnpm install'
-```
-
-**Interactive Menu:**
-
-To start the interactive menu, run `npm start` (or `yarn start` or `pnpm start`). This will list all of the commonly used scripts.
-
-### Build
-
-```bash
-npm run build
-
-npm run build.angular # or for Angular
-```
-
-### Demos
-
-```bash
-npm run demo.[ng|react|svelte|vue].[ios|android]
-
-npm run demo.svelte.ios # Example
-```
-
-[](#questions)
-
-
-[](#questions)
-
-## Questions
-
-If you have any questions/issues/comments please feel free to create an issue or start a conversation in the [NativeScript Community Discord](https://nativescript.org/discord).
+{{ load:../../tools/readme/demos-and-development.md }}
+{{ load:../../tools/readme/questions.md }}

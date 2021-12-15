@@ -2,9 +2,14 @@
     "name": "@nativescript-community/universal-links",
     "version": "2.0.5",
     "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
-    "main": "./universal-links",
-    "module": "./universal-links.mjs",
-    "typings": "./universal-links-common.d.ts",
+    "main": "./index",
+    "typings": "./index-common.d.ts",
+    "scripts": {
+        "build": "npm run tsc && npm run readme",
+        "readme": "../../node_modules/.bin/readme generate -c ../../tools/readme/blueprint.json",
+        "tsc": "../../node_modules/.bin/cpy '**/*.d.ts' '../../packages/universal-links' --parents --cwd=../../src/universal-links && ../../node_modules/.bin/tsc -skipLibCheck -d",
+        "clean": "../../node_modules/.bin/rimraf ./*.d.ts ./*.js ./*.js.map"
+    },
     "nativescript": {
         "platforms": {
             "android": "6.0.0",
@@ -18,7 +23,10 @@
         "iOS",
         "universal",
         "link",
-        "deeplink"
+        "deeplink",
+        "vue.js",
+        "preview|https://raw.githubusercontent.com/nativescript-community/universal-links/master/images/demo-ios.gif|iOS Demo",
+        "preview|https://raw.githubusercontent.com/nativescript-community/universal-links/master/images/demo-android.gif|Android Demo"
     ],
     "author": {
         "name": "Dragos Sebestin"

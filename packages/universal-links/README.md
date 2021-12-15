@@ -1,4 +1,4 @@
-<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
+<!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
 <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,9 +43,6 @@ Apple calls this _Universal Links_ and Google calls it _App Links_, but they mea
 
 [](#table-of-contents)
 
-
-[](#table-of-contents)
-
 ## Table of Contents
 
 * [Installation](#installation)
@@ -62,16 +59,10 @@ Apple calls this _Universal Links_ and Google calls it _App Links_, but they mea
 
 [](#installation)
 
-
-[](#installation)
-
 ## Installation
 Run the following command from the root of your project:
 
 `ns plugin add @nativescript-community/universal-links`
-
-
-[](#implementing-universal-links)
 
 
 [](#implementing-universal-links)
@@ -145,9 +136,6 @@ Add this code to your `App_Resources/Android/src/main/AndroidManifest.xml` file:
 
 [](#usage)
 
-
-[](#usage)
-
 ## Usage
 
 Call the `registerUniversalLinkCallback` somewhere in the startup of your app. This Angular example puts it in the AppComponent's ngOnInit method to provide a callback method which will receive an Universal Link object every time your app is opened by a website link:
@@ -194,9 +182,6 @@ const ul = getUniversalLink();
 
 [](#demos-and-development)
 
-
-[](#demos-and-development)
-
 ## Demos and Development
 
 
@@ -232,9 +217,6 @@ npm run demo.[ng|react|svelte|vue].[ios|android]
 
 npm run demo.svelte.ios # Example
 ```
-
-[](#questions)
-
 
 [](#questions)
 
