@@ -43,3 +43,16 @@ addDelegateHandler(delegate, 'applicationContinueUserActivityRestorationHandler'
         return false;
     }
 });
+
+addDelegateHandler(delegate, 'applicationOpenURLOptions', (_app, url, _options) => {
+    let handled = false;
+    if (url) {
+        setUniversalLink(url.absoluteString);
+        const callback = getRegisteredCallback();
+        if (callback) {
+            handled = true;
+            callback(getUniversalLink());
+        }
+    }
+    return handled;
+});
