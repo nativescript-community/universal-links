@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://github.com/nativescript-community/universal-links/compare/v2.0.6...v2.0.7) (2022-01-19)
+
+
+### Bug Fixes
+
+* handle applicationOpenURLOptions on iOS ([e44bab5](https://github.com/nativescript-community/universal-links/commit/e44bab5534f8352f497ede906a58804f288fe7f9))
+
+
+
+
+
 ## [2.0.6](https://github.com/nativescript-community/universal-links/compare/v2.0.5...v2.0.6) (2021-12-15)
 
 **Note:** Version bump only for package @nativescript-community/universal-links
