@@ -110,10 +110,16 @@ Check out [Apples' docs](https://developer.apple.com/library/archive/documentati
 Next, you need to add the Associated Domains to your IOS project, either using XCode or manually adding the following code to your `App_Resources/IOS/app.entitlements` file. Please note the `applinks:` prefix, it won't work without it.
 
 ```xml
-<key>com.apple.developer.associated-domains</key>
-<array>
-  <string>applinks:www.example.com</string>
-</array>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>com.apple.developer.associated-domains</key>
+    <array>
+      <string>applinks:www.example.com</string>
+    </array>
+  </dict>
+</plist>
 ```
 
 ### Android
