@@ -6,18 +6,26 @@ Application.android.on(AndroidApplication.activityNewIntentEvent, (args) => {
     const intent: android.content.Intent = args.activity.getIntent();
     try {
         const data = intent.getData();
-        if (data) {
-            setUniversalLink(data.toString());
-            intent.setData(null);
+        if (!data) {
+            return; // nothing to do
+        }
 
-            const callback = getRegisteredCallback();
-            if (callback) {
-                callback(getUniversalLink());
-            }
-        } else {
-            setUniversalLink();
+        setUniversalLink(data.toString());
+        const callback = getRegisteredCallback();
+        if (callback) {
+            callback(getUniversalLink());
         }
     } catch (e) {
         console.error(e);
+    }
+});
+
+Application.android.on(AndroidApplication.activityDestroyedEvent, (args) => {
+    const intent: android.content.Intent = args.activity.getIntent();
+    const data = intent.getData();
+
+    if (data) {
+        intent.setData(null);
+        setUniversalLink();
     }
 });
