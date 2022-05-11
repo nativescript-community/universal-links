@@ -15,8 +15,8 @@
 import { getUniversalLink, registerUniversalLinkCallback } from '@nativescript-community/universal-links';
 export default {
     async mounted() {
-        registerUniversalLinkCallback((ul) => {
-            console.log(JSON.stringify(ul));
+        registerUniversalLinkCallback((link) => {
+            console.log(link);
         });
         // const ul = getUniversalLink();
         // alert(JSON.stringify(ul))

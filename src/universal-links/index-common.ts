@@ -1,36 +1,14 @@
-import * as urlparse from 'url-parse';
-
-/**
- * Universal link wrapper.
- */
-export class UniversalLink {
-    public href: string;
-    public origin: string;
-    public pathname: string;
-    public query: {
-        [key: string]: string;
-    };
-    constructor(link: string) {
-        const url = urlparse(link, true);
-
-        this.href = url.href;
-        this.origin = url.origin;
-        this.pathname = url.pathname;
-        this.query = url.query;
-    }
-}
-
-let universalLink: UniversalLink | undefined;
+let universalLink: string;
 
 export function setUniversalLink(link?: string) {
-    universalLink = link != null ? new UniversalLink(link) : undefined;
+    universalLink = link != null ? link : undefined;
 }
 
 export function getUniversalLink() {
     return universalLink;
 }
 
-export type AppCallback = (ul: UniversalLink) => void;
+export type AppCallback = (link: string) => void;
 export let callback: AppCallback | undefined;
 export function registerUniversalLinkCallback(cb: AppCallback) {
     callback = cb;

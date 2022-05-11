@@ -11,6 +11,25 @@ Apple calls this _Universal Links_ and Google calls it _App Links_, but they mea
 | --- | ----------- |
 | iOS Demo | Android Demo |
 
+## Migration to 3.x
+
+In version 3.0.0 the returned object is now simply the link as a `string`. It is not "parsed" anymore. The reason for that is that `url-parse` package used for this is pretty huge and not needed by most.
+You can still parse like so:
+```typescript
+import * as urlparse from 'url-parse';
+
+function parseLink(link: string) {
+  const url = urlparse(link, true);
+  return {
+    href: url.href,
+    origin: url.origin
+    pathname: url.pathname,
+    query: url.query
+  }
+  
+}
+```
+
 {{ template:toc }}
 
 ## Installation
@@ -52,10 +71,16 @@ Check out [Apples' docs](https://developer.apple.com/library/archive/documentati
 Next, you need to add the Associated Domains to your IOS project, either using XCode or manually adding the following code to your `App_Resources/IOS/app.entitlements` file. Please note the `applinks:` prefix, it won't work without it.
 
 ```xml
-<key>com.apple.developer.associated-domains</key>
-<array>
-  <string>applinks:www.example.com</string>
-</array>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>com.apple.developer.associated-domains</key>
+    <array>
+      <string>applinks:www.example.com</string>
+    </array>
+  </dict>
+</plist>
 ```
 
 ### Android
