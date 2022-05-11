@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/universal-links",
-    "version": "2.0.7",
+    "version": "3.0.0",
     "description": "Universal links (IOS) and App Links (Android) support for NativeScript.",
     "main": "./index",
     "typings": "./index-common.d.ts",
