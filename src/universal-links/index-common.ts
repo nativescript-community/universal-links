@@ -22,8 +22,8 @@ export class UniversalLink {
 
 let universalLink: UniversalLink | undefined;
 
-export function setUniversalLink(link: string) {
-    universalLink = new UniversalLink(link);
+export function setUniversalLink(link?: string) {
+    universalLink = link != null ? new UniversalLink(link) : undefined;
 }
 
 export function getUniversalLink() {
