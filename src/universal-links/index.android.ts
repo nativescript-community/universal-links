@@ -1,6 +1,6 @@
 ﻿import { AndroidApplication, Application } from '@nativescript/core';
 import { getRegisteredCallback, getUniversalLink, setUniversalLink } from './index-common';
-export { getUniversalLink, registerUniversalLinkCallback } from './index-common';
+export { setUniversalLink, getUniversalLink, registerUniversalLinkCallback } from './index-common';
 
 Application.android.on(AndroidApplication.activityNewIntentEvent, (args) => {
     const intent: android.content.Intent = args.activity.getIntent();
