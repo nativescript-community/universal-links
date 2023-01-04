@@ -15,18 +15,20 @@
         "build": "lerna run build",
         "build.all": "npm run build",
         "commitmsg": "commitlint -e $GIT_PARAMS",
-        "publish": "npm run setup && npm run build.all && lerna publish --create-release=github --force-publish",
+        "publish": "npm run clean && npm run build.all && npm run readme && lerna publish --no-private --create-release=github --force-publish",
         "setup": "npm run submodules && ts-patch install",
-        "clean": "rimraf 'packages/**/*.d.ts' 'packages/**/*.js' 'packages/**/*.js.map' 'packages/**/*.metadata.json' 'packages/**/*.ngsummary.json' 'packages/**/*.mjs' 'packages/**/*.mjs.map' 'packages/**/node_modules' 'packages/**/angular/package.json' 'package-lock.json' 'pnpm-lock.yaml' 'node_modules'",
-        "demo.vue.android": "cd ./demo-vue && ns run android --no-hmr",
+        "clean": "rimraf 'packages/**/*.d.ts' 'packages/**/*.js' 'packages/**/*.js.map' 'packages/**/*.metada' 'packages/**/angular/ng-package.json'",
+        "demo.vue.android": "cd ./demo-vue && ns run android --no-hmr --env.watchNodeModules",
         "demo.vue.clean": "cd ./demo-vue && ns clean",
-        "demo.vue.ios": "cd ./demo-vue && ns run ios --no-hmr",
+        "demo.vue.ios": "cd ./demo-vue && ns run ios --no-hmr --env.watchNodeModules",
         "postinstall": "npm run setup",
         "readme": "node ./tools/readme.js",
         "start": "./node_modules/.bin/ntl -A -s 15 -o",
         "submodules": "git submodule update --init",
         "sync": "node ./tools/sync.js",
-        "update": "node ./tools/update.js"
+        "update": "node ./tools/update.js",
+        "fullclean": "npm run clean && rimraf 'packages/**/node_modules' 'demo-*/hooks' 'demo-*/node_modules' 'package-lock.json' 'pnpm-lock.yaml' 'node_modules'",
+        "doc": "node tools/builddoc.mjs"
     },
     "commitlint": {
         "extends": [
@@ -45,5 +47,19 @@
             "demo.vue.ios": "Runs the Vue demo on iOS.",
             "watch": "Watch for changes in the plugin source and re-build."
         }
+    },
+    "workspaces": [
+        "packages/*",
+        "demo-vue",
+        "demo-ng",
+        "demo-svelte",
+        "demo-react",
+        "demo-snippets"
+    ],
+    "engines": {
+        "npm": "please use yarn or pnpm",
+        "yarn": ">=1.19.1",
+        "pnpm": ">=7.0.0",
+        "node": "^14.20.0 || ^16.13.0 || >=18.10.0"
     }
 }
