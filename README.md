@@ -1,4 +1,81 @@
 <!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
+[](#demos-and-development)
+
+## Demos and Development
+
+
+### Repo Setup
+
+The repo uses submodules. If you did not clone with ` --recursive` then you need to call
+```
+git submodule update --init
+```
+
+The package manager used to install and link dependencies must be `pnpm` or `yarn`. `npm` wont work.
+
+To develop and test:
+if you use `yarn` then run `yarn`
+if you use `pnpm` then run `pnpm i`
+
+**Interactive Menu:**
+
+To start the interactive menu, run `npm start` (or `yarn start` or `pnpm start`). This will list all of the commonly used scripts.
+
+### Build
+
+```bash
+npm run build.all
+```
+
+### Demos
+
+```bash
+npm run demo.[ng|react|svelte|vue].[ios|android]
+
+npm run demo.svelte.ios # Example
+```
+
+
+[](#contributing)
+
+## Contributing
+
+### Update repo 
+
+You can update the repo files quite easily
+
+First update the submodules
+
+```bash
+npm run update
+```
+
+Then commit the changes
+Then update common files
+
+```bash
+npm run sync
+```
+Then you can run `yarn|pnpm`, commit changed files if any
+
+### Update readme 
+```bash
+npm run readme
+```
+
+### Update doc 
+```bash
+npm run doc
+```
+
+### Publish
+
+The publishing is completely handled by `lerna` (you can add `-- --bump major` to force a major release)
+Simply run 
+```shell
+npm run publish
+```
+<br><br><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
 <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,6 +120,9 @@ Apple calls this _Universal Links_ and Google calls it _App Links_, but they mea
 
 [](#migration-to-3x)
 
+
+[](#migration-to-3x)
+
 ## Migration to 3.x
 
 In version 3.0.0 the returned object is now simply the link as a `string`. It is not "parsed" anymore. The reason for that is that `url-parse` package used for this is pretty huge and not needed by most.
@@ -65,6 +145,9 @@ function parseLink(link: string) {
 
 [](#table-of-contents)
 
+
+[](#table-of-contents)
+
 ## Table of Contents
 
 * [Migration to 3.x](#migration-to-3x)
@@ -82,10 +165,16 @@ function parseLink(link: string) {
 
 [](#installation)
 
+
+[](#installation)
+
 ## Installation
 Run the following command from the root of your project:
 
 `ns plugin add @nativescript-community/universal-links`
+
+
+[](#implementing-universal-links)
 
 
 [](#implementing-universal-links)
@@ -165,6 +254,9 @@ Add this code to your `App_Resources/Android/src/main/AndroidManifest.xml` file:
 
 [](#usage)
 
+
+[](#usage)
+
 ## Usage
 
 Call the `registerUniversalLinkCallback` somewhere in the startup of your app. This Angular example puts it in the AppComponent's ngOnInit method to provide a callback method which will receive an Universal Link object every time your app is opened by a website link:
@@ -211,6 +303,9 @@ const ul = getUniversalLink();
 
 [](#demos-and-development)
 
+
+[](#demos-and-development)
+
 ## Demos and Development
 
 
@@ -246,6 +341,9 @@ npm run demo.[ng|react|svelte|vue].[ios|android]
 
 npm run demo.svelte.ios # Example
 ```
+
+[](#questions)
+
 
 [](#questions)
 
