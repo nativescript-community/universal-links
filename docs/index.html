@@ -12,76 +12,7 @@
 <div class="col-8 col-content">
 <div class="tsd-page-title">
 <h2>@nativescript-community/universal-links</h2></div>
-<div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
-<p><a href="#demos-and-development"></a></p>
-
-<a href="#demos-and-development" id="demos-and-development" style="color: inherit; text-decoration: none;">
-  <h2>Demos and Development</h2>
-</a>
-
-<a href="#repo-setup" id="repo-setup" style="color: inherit; text-decoration: none;">
-  <h3>Repo Setup</h3>
-</a>
-<p>The repo uses submodules. If you did not clone with <code> --recursive</code> then you need to call</p>
-<pre><code><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-0">submodule</span><span class="hl-1"> </span><span class="hl-0">update</span><span class="hl-1"> --</span><span class="hl-0">init</span>
-</code></pre>
-<p>The package manager used to install and link dependencies must be <code>pnpm</code> or <code>yarn</code>. <code>npm</code> wont work.</p>
-<p>To develop and test:
-if you use <code>yarn</code> then run <code>yarn</code>
-if you use <code>pnpm</code> then run <code>pnpm i</code></p>
-<p><strong>Interactive Menu:</strong></p>
-<p>To start the interactive menu, run <code>npm start</code> (or <code>yarn start</code> or <code>pnpm start</code>). This will list all of the commonly used scripts.</p>
-
-<a href="#build" id="build" style="color: inherit; text-decoration: none;">
-  <h3>Build</h3>
-</a>
-<pre><code class="language-bash"><span class="hl-1">npm run build.all</span>
-</code></pre>
-
-<a href="#demos" id="demos" style="color: inherit; text-decoration: none;">
-  <h3>Demos</h3>
-</a>
-<pre><code class="language-bash"><span class="hl-1">npm run demo.[ng|react|svelte|vue].[ios|android]</span><br/><br/><span class="hl-1">npm run demo.svelte.ios </span><span class="hl-2"># Example</span>
-</code></pre>
-<p><a href="#contributing"></a></p>
-
-<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
-  <h2>Contributing</h2>
-</a>
-
-<a href="#update-repo" id="update-repo" style="color: inherit; text-decoration: none;">
-  <h3>Update repo</h3>
-</a>
-<p>You can update the repo files quite easily</p>
-<p>First update the submodules</p>
-<pre><code class="language-bash"><span class="hl-1">npm run update</span>
-</code></pre>
-<p>Then commit the changes
-Then update common files</p>
-<pre><code class="language-bash"><span class="hl-1">npm run sync</span>
-</code></pre>
-<p>Then you can run <code>yarn|pnpm</code>, commit changed files if any</p>
-
-<a href="#update-readme" id="update-readme" style="color: inherit; text-decoration: none;">
-  <h3>Update readme</h3>
-</a>
-<pre><code class="language-bash"><span class="hl-1">npm run readme</span>
-</code></pre>
-
-<a href="#update-doc" id="update-doc" style="color: inherit; text-decoration: none;">
-  <h3>Update doc</h3>
-</a>
-<pre><code class="language-bash"><span class="hl-1">npm run doc</span>
-</code></pre>
-
-<a href="#publish" id="publish" style="color: inherit; text-decoration: none;">
-  <h3>Publish</h3>
-</a>
-<p>The publishing is completely handled by <code>lerna</code> (you can add <code>-- --bump major</code> to force a major release)
-Simply run </p>
-<pre><code class="language-shell"><span class="hl-1">npm run publish</span>
-</code></pre>
-<p><br><br><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--></p>
+<div class="tsd-panel tsd-typography"><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️--><!-- ⚠️ This README has been generated from the file(s) "blueprint.md" ⚠️-->
 <!--  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -137,7 +68,7 @@ Simply run </p>
 </a>
 <p>In version 3.0.0 the returned object is now simply the link as a <code>string</code>. It is not &quot;parsed&quot; anymore. The reason for that is that <code>url-parse</code> package used for this is pretty huge and not needed by most.
 You can still parse like so:</p>
-<pre><code class="language-typescript"><span class="hl-3">import</span><span class="hl-1"> </span><span class="hl-4">*</span><span class="hl-1"> </span><span class="hl-3">as</span><span class="hl-1"> </span><span class="hl-0">urlparse</span><span class="hl-1"> </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-5">&#39;url-parse&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">function</span><span class="hl-1"> </span><span class="hl-6">parseLink</span><span class="hl-1">(</span><span class="hl-0">link</span><span class="hl-1">: </span><span class="hl-7">string</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-8">url</span><span class="hl-1"> = </span><span class="hl-6">urlparse</span><span class="hl-1">(</span><span class="hl-0">link</span><span class="hl-1">, </span><span class="hl-4">true</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-3">return</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">href:</span><span class="hl-1"> </span><span class="hl-0">url</span><span class="hl-1">.</span><span class="hl-0">href</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-0">origin:</span><span class="hl-1"> </span><span class="hl-0">url</span><span class="hl-1">.</span><span class="hl-0">origin</span><br/><span class="hl-1">    </span><span class="hl-0">pathname</span><span class="hl-1">: </span><span class="hl-0">url</span><span class="hl-1">.</span><span class="hl-0">pathname</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-0">query:</span><span class="hl-1"> </span><span class="hl-0">url</span><span class="hl-1">.</span><span class="hl-0">query</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">  </span><br/><span class="hl-1">}</span>
+<pre><code class="language-typescript"><span class="hl-0">import</span><span class="hl-1"> </span><span class="hl-2">*</span><span class="hl-1"> </span><span class="hl-0">as</span><span class="hl-1"> </span><span class="hl-3">urlparse</span><span class="hl-1"> </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-4">&#39;url-parse&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-2">function</span><span class="hl-1"> </span><span class="hl-5">parseLink</span><span class="hl-1">(</span><span class="hl-3">link</span><span class="hl-1">: </span><span class="hl-6">string</span><span class="hl-1">) {</span><br/><span class="hl-1">  </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-7">url</span><span class="hl-1"> = </span><span class="hl-5">urlparse</span><span class="hl-1">(</span><span class="hl-3">link</span><span class="hl-1">, </span><span class="hl-2">true</span><span class="hl-1">);</span><br/><span class="hl-1">  </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-3">href:</span><span class="hl-1"> </span><span class="hl-3">url</span><span class="hl-1">.</span><span class="hl-3">href</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-3">origin:</span><span class="hl-1"> </span><span class="hl-3">url</span><span class="hl-1">.</span><span class="hl-3">origin</span><br/><span class="hl-1">    </span><span class="hl-3">pathname</span><span class="hl-1">: </span><span class="hl-3">url</span><span class="hl-1">.</span><span class="hl-3">pathname</span><span class="hl-1">,</span><br/><span class="hl-1">    </span><span class="hl-3">query:</span><span class="hl-1"> </span><span class="hl-3">url</span><span class="hl-1">.</span><span class="hl-3">query</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">  </span><br/><span class="hl-1">}</span>
 </code></pre>
 <p><a href="#table-of-contents"></a></p>
 <p><a href="#table-of-contents"></a></p>
@@ -155,9 +86,16 @@ You can still parse like so:</p>
 </li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#demos-and-development">Demos and Development</a><ul>
-<li><a href="#setup">Setup</a></li>
+<li><a href="#repo-setup">Repo Setup</a></li>
 <li><a href="#build">Build</a></li>
 <li><a href="#demos">Demos</a></li>
+</ul>
+</li>
+<li><a href="#contributing">Contributing</a><ul>
+<li><a href="#update-repo-">Update repo </a></li>
+<li><a href="#update-readme-">Update readme </a></li>
+<li><a href="#update-doc-">Update doc </a></li>
+<li><a href="#publish">Publish</a></li>
 </ul>
 </li>
 <li><a href="#questions">Questions</a></li>
@@ -183,7 +121,7 @@ You can still parse like so:</p>
 </a>
 <p>Apple introduced a new deep linking API in iOS 9.0 called “Universal Links”. It provides a better user experience than the hacky deep linking options that existed in iOS 8.0 and below.</p>
 <p>First step is to add a file to the root of your website called <code>apple-app-site-association</code>. This is a JSON file and it looks like this:</p>
-<pre><code class="language-javascript"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-5">&quot;applinks&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-5">&quot;apps&quot;</span><span class="hl-0">:</span><span class="hl-1"> [],</span><br/><span class="hl-1">        </span><span class="hl-5">&quot;details&quot;</span><span class="hl-0">:</span><span class="hl-1"> [</span><br/><span class="hl-1">            {</span><br/><span class="hl-1">                </span><span class="hl-5">&quot;appID&quot;</span><span class="hl-0">:</span><span class="hl-1"> </span><span class="hl-5">&quot;TEAM_ID.BUNDLE_ID&quot;</span><span class="hl-1">, </span><span class="hl-2">// ex: &quot;9JA89QQLNQ.com.apple.wwdc&quot;</span><br/><span class="hl-1">                </span><span class="hl-5">&quot;paths&quot;</span><span class="hl-0">:</span><span class="hl-1"> [ </span><span class="hl-5">&quot;/blog/*&quot;</span><span class="hl-1">]</span><br/><span class="hl-1">            }</span><br/><span class="hl-1">        ]</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+<pre><code class="language-javascript"><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-4">&quot;applinks&quot;</span><span class="hl-1">: {</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;apps&quot;</span><span class="hl-3">:</span><span class="hl-1"> [],</span><br/><span class="hl-1">        </span><span class="hl-4">&quot;details&quot;</span><span class="hl-3">:</span><span class="hl-1"> [</span><br/><span class="hl-1">            {</span><br/><span class="hl-1">                </span><span class="hl-4">&quot;appID&quot;</span><span class="hl-3">:</span><span class="hl-1"> </span><span class="hl-4">&quot;TEAM_ID.BUNDLE_ID&quot;</span><span class="hl-1">, </span><span class="hl-8">// ex: &quot;9JA89QQLNQ.com.apple.wwdc&quot;</span><br/><span class="hl-1">                </span><span class="hl-4">&quot;paths&quot;</span><span class="hl-3">:</span><span class="hl-1"> [ </span><span class="hl-4">&quot;/blog/*&quot;</span><span class="hl-1">]</span><br/><span class="hl-1">            }</span><br/><span class="hl-1">        ]</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
 </code></pre>
 <ul>
 <li>This file will be downloaded automatically by every single user that installs or upgrades your iOS app.</li>
@@ -193,7 +131,7 @@ You can still parse like so:</p>
 </ul>
 <p>Check out <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW2">Apples&#39; docs</a> for more info.</p>
 <p>Next, you need to add the Associated Domains to your IOS project, either using XCode or manually adding the following code to your <code>App_Resources/IOS/app.entitlements</code> file. Please note the <code>applinks:</code> prefix, it won&#39;t work without it.</p>
-<pre><code class="language-xml"><span class="hl-9">&lt;?</span><span class="hl-10">xml</span><span class="hl-11"> version</span><span class="hl-1">=</span><span class="hl-12">&quot;1.0&quot;</span><span class="hl-11"> encoding</span><span class="hl-1">=</span><span class="hl-12">&quot;UTF-8&quot;</span><span class="hl-9">?&gt;</span><br/><span class="hl-9">&lt;!</span><span class="hl-4">DOCTYPE</span><span class="hl-1"> </span><span class="hl-4">plist</span><span class="hl-1"> PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;</span><span class="hl-10">plist</span><span class="hl-1"> </span><span class="hl-11">version</span><span class="hl-1">=</span><span class="hl-12">&quot;1.0&quot;</span><span class="hl-9">&gt;</span><br/><span class="hl-1">  </span><span class="hl-9">&lt;</span><span class="hl-10">dict</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">key</span><span class="hl-9">&gt;</span><span class="hl-1">com.apple.developer.associated-domains</span><span class="hl-9">&lt;/</span><span class="hl-10">key</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">array</span><span class="hl-9">&gt;</span><br/><span class="hl-1">      </span><span class="hl-9">&lt;</span><span class="hl-10">string</span><span class="hl-9">&gt;</span><span class="hl-1">applinks:www.example.com</span><span class="hl-9">&lt;/</span><span class="hl-10">string</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;/</span><span class="hl-10">array</span><span class="hl-9">&gt;</span><br/><span class="hl-1">  </span><span class="hl-9">&lt;/</span><span class="hl-10">dict</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">plist</span><span class="hl-9">&gt;</span>
+<pre><code class="language-xml"><span class="hl-9">&lt;?</span><span class="hl-10">xml</span><span class="hl-11"> version</span><span class="hl-1">=</span><span class="hl-12">&quot;1.0&quot;</span><span class="hl-11"> encoding</span><span class="hl-1">=</span><span class="hl-12">&quot;UTF-8&quot;</span><span class="hl-9">?&gt;</span><br/><span class="hl-9">&lt;!</span><span class="hl-2">DOCTYPE</span><span class="hl-1"> </span><span class="hl-2">plist</span><span class="hl-1"> PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;</span><span class="hl-10">plist</span><span class="hl-1"> </span><span class="hl-11">version</span><span class="hl-1">=</span><span class="hl-12">&quot;1.0&quot;</span><span class="hl-9">&gt;</span><br/><span class="hl-1">  </span><span class="hl-9">&lt;</span><span class="hl-10">dict</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">key</span><span class="hl-9">&gt;</span><span class="hl-1">com.apple.developer.associated-domains</span><span class="hl-9">&lt;/</span><span class="hl-10">key</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">array</span><span class="hl-9">&gt;</span><br/><span class="hl-1">      </span><span class="hl-9">&lt;</span><span class="hl-10">string</span><span class="hl-9">&gt;</span><span class="hl-1">applinks:www.example.com</span><span class="hl-9">&lt;/</span><span class="hl-10">string</span><span class="hl-9">&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;/</span><span class="hl-10">array</span><span class="hl-9">&gt;</span><br/><span class="hl-1">  </span><span class="hl-9">&lt;/</span><span class="hl-10">dict</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">plist</span><span class="hl-9">&gt;</span>
 </code></pre>
 
 <a href="#android" id="android" style="color: inherit; text-decoration: none;">
@@ -202,7 +140,7 @@ You can still parse like so:</p>
 <p>In Android, universal linking is implemented using Intent Filters. By adding a BROWSABLE intent filter, you are saying that your app can be started by a user clicking on a website url.</p>
 <p>You don&#39;t need any server side changes for Android, only modify your app to add the Intent Filter.
 Add this code to your <code>App_Resources/Android/src/main/AndroidManifest.xml</code> file:</p>
-<pre><code class="language-xml"><span class="hl-9">&lt;</span><span class="hl-10">activity</span><br/><span class="hl-1">    </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;com.tns.NativeScriptActivity&quot;</span><br/><span class="hl-1">    </span><span class="hl-11">android:label</span><span class="hl-1">=</span><span class="hl-12">&quot;@string/title_activity_kimera&quot;</span><span class="hl-1"> </span><span class="hl-9">&gt;</span><br/><br/><span class="hl-1">    </span><span class="hl-2">&lt;!-- Add this new section to your Activity --&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">intent-filter</span><span class="hl-9">&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">action</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.action.VIEW&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">category</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.category.DEFAULT&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">category</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.category.BROWSABLE&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><br/><span class="hl-1">        </span><span class="hl-2">&lt;!-- Handle urls starting with &quot;https://www.example.com/blog&quot; --&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">data</span><span class="hl-1"> </span><span class="hl-11">android:scheme</span><span class="hl-1">=</span><span class="hl-12">&quot;https&quot;</span><br/><span class="hl-1">              </span><span class="hl-11">android:host</span><span class="hl-1">=</span><span class="hl-12">&quot;www.example.com&quot;</span><br/><span class="hl-1">              </span><span class="hl-11">android:pathPrefix</span><span class="hl-1">=</span><span class="hl-12">&quot;/blog&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;/</span><span class="hl-10">intent-filter</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">activity</span><span class="hl-9">&gt;</span>
+<pre><code class="language-xml"><span class="hl-9">&lt;</span><span class="hl-10">activity</span><br/><span class="hl-1">    </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;com.tns.NativeScriptActivity&quot;</span><br/><span class="hl-1">    </span><span class="hl-11">android:label</span><span class="hl-1">=</span><span class="hl-12">&quot;@string/title_activity_kimera&quot;</span><span class="hl-1"> </span><span class="hl-9">&gt;</span><br/><br/><span class="hl-1">    </span><span class="hl-8">&lt;!-- Add this new section to your Activity --&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;</span><span class="hl-10">intent-filter</span><span class="hl-9">&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">action</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.action.VIEW&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">category</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.category.DEFAULT&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">category</span><span class="hl-1"> </span><span class="hl-11">android:name</span><span class="hl-1">=</span><span class="hl-12">&quot;android.intent.category.BROWSABLE&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><br/><span class="hl-1">        </span><span class="hl-8">&lt;!-- Handle urls starting with &quot;https://www.example.com/blog&quot; --&gt;</span><br/><span class="hl-1">        </span><span class="hl-9">&lt;</span><span class="hl-10">data</span><span class="hl-1"> </span><span class="hl-11">android:scheme</span><span class="hl-1">=</span><span class="hl-12">&quot;https&quot;</span><br/><span class="hl-1">              </span><span class="hl-11">android:host</span><span class="hl-1">=</span><span class="hl-12">&quot;www.example.com&quot;</span><br/><span class="hl-1">              </span><span class="hl-11">android:pathPrefix</span><span class="hl-1">=</span><span class="hl-12">&quot;/blog&quot;</span><span class="hl-1"> </span><span class="hl-9">/&gt;</span><br/><span class="hl-1">    </span><span class="hl-9">&lt;/</span><span class="hl-10">intent-filter</span><span class="hl-9">&gt;</span><br/><span class="hl-9">&lt;/</span><span class="hl-10">activity</span><span class="hl-9">&gt;</span>
 </code></pre>
 <p><a href="#usage"></a></p>
 <p><a href="#usage"></a></p>
@@ -211,43 +149,83 @@ Add this code to your <code>App_Resources/Android/src/main/AndroidManifest.xml</
   <h2>Usage</h2>
 </a>
 <p>Call the <code>registerUniversalLinkCallback</code> somewhere in the startup of your app. This Angular example puts it in the AppComponent&#39;s ngOnInit method to provide a callback method which will receive an Universal Link object every time your app is opened by a website link:</p>
-<pre><code class="language-js"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-0">Component</span><span class="hl-1">, </span><span class="hl-0">OnInit</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-5">&quot;@angular/core&quot;</span><span class="hl-1">;</span><br/><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-0">registerUniversalLinkCallback</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-5">&quot;@nativescript-community/universal-links&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-1">@</span><span class="hl-6">Component</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-0">selector:</span><span class="hl-1"> </span><span class="hl-5">&quot;my-app&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-0">template:</span><span class="hl-1"> </span><span class="hl-5">&quot;&lt;page-router-outlet&gt;&lt;/page-router-outlet&gt;&quot;</span><br/><span class="hl-1">})</span><br/><span class="hl-3">export</span><span class="hl-1"> </span><span class="hl-4">class</span><span class="hl-1"> </span><span class="hl-7">AppComponent</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-4">constructor</span><span class="hl-1">() {}</span><br/><br/><span class="hl-1">  </span><span class="hl-6">ngOnInit</span><span class="hl-1">() {</span><br/><span class="hl-1">    </span><span class="hl-6">registerUniversalLinkCallback</span><span class="hl-1">(</span><span class="hl-0">ul</span><span class="hl-1"> </span><span class="hl-4">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-2">// use the router to navigate to the screen</span><br/><span class="hl-1">    });</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
+<pre><code class="language-js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-3">Component</span><span class="hl-1">, </span><span class="hl-3">OnInit</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-4">&quot;@angular/core&quot;</span><span class="hl-1">;</span><br/><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-3">registerUniversalLinkCallback</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-4">&quot;@nativescript-community/universal-links&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-1">@</span><span class="hl-5">Component</span><span class="hl-1">({</span><br/><span class="hl-1">  </span><span class="hl-3">selector:</span><span class="hl-1"> </span><span class="hl-4">&quot;my-app&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-3">template:</span><span class="hl-1"> </span><span class="hl-4">&quot;&lt;page-router-outlet&gt;&lt;/page-router-outlet&gt;&quot;</span><br/><span class="hl-1">})</span><br/><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-6">AppComponent</span><span class="hl-1"> {</span><br/><span class="hl-1">  </span><span class="hl-2">constructor</span><span class="hl-1">() {}</span><br/><br/><span class="hl-1">  </span><span class="hl-5">ngOnInit</span><span class="hl-1">() {</span><br/><span class="hl-1">    </span><span class="hl-5">registerUniversalLinkCallback</span><span class="hl-1">(</span><span class="hl-3">ul</span><span class="hl-1"> </span><span class="hl-2">=&gt;</span><span class="hl-1"> {</span><br/><span class="hl-1">      </span><span class="hl-8">// use the router to navigate to the screen</span><br/><span class="hl-1">    });</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
 </code></pre>
 <p>The universal link object has the following structure:</p>
-<pre><code class="language-JSON"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;href&quot;</span><span class="hl-1">: </span><span class="hl-5">&quot;https://www.example.com/blog?title=welcome&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;origin&quot;</span><span class="hl-1">: </span><span class="hl-5">&quot;https://www.example.com&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;pathname&quot;</span><span class="hl-1">: </span><span class="hl-5">&quot;/blog&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;query&quot;</span><span class="hl-1">: </span><span class="hl-5">&quot;?title=welcome&quot;</span><br/><span class="hl-1">}</span>
+<pre><code class="language-JSON"><span class="hl-1">{</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;href&quot;</span><span class="hl-1">: </span><span class="hl-4">&quot;https://www.example.com/blog?title=welcome&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;origin&quot;</span><span class="hl-1">: </span><span class="hl-4">&quot;https://www.example.com&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;pathname&quot;</span><span class="hl-1">: </span><span class="hl-4">&quot;/blog&quot;</span><span class="hl-1">,</span><br/><span class="hl-1">  </span><span class="hl-13">&quot;query&quot;</span><span class="hl-1">: </span><span class="hl-4">&quot;?title=welcome&quot;</span><br/><span class="hl-1">}</span>
 </code></pre>
 <p>There is also a <code>getUniversalLink()</code> method that will return the last universal link which opened the app. This is useful in scenarios where your app is protected by a login screen. Check if the user is authenticated and then navigate to the desired path.</p>
-<pre><code class="language-js"><span class="hl-3">import</span><span class="hl-1"> { </span><span class="hl-0">getUniversalLink</span><span class="hl-1"> } </span><span class="hl-3">from</span><span class="hl-1"> </span><span class="hl-5">&quot;nativescript-plugin-universal-links&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-4">const</span><span class="hl-1"> </span><span class="hl-8">ul</span><span class="hl-1"> = </span><span class="hl-6">getUniversalLink</span><span class="hl-1">();</span>
+<pre><code class="language-js"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-3">getUniversalLink</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-4">&quot;nativescript-plugin-universal-links&quot;</span><span class="hl-1">;</span><br/><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-7">ul</span><span class="hl-1"> = </span><span class="hl-5">getUniversalLink</span><span class="hl-1">();</span>
 </code></pre>
 <p><a href="#demos-and-development"></a></p>
 <p><a href="#demos-and-development"></a></p>
 
-<a href="#demos-and-development-1" id="demos-and-development-1" style="color: inherit; text-decoration: none;">
+<a href="#demos-and-development" id="demos-and-development" style="color: inherit; text-decoration: none;">
   <h2>Demos and Development</h2>
 </a>
 
-<a href="#setup" id="setup" style="color: inherit; text-decoration: none;">
-  <h3>Setup</h3>
+<a href="#repo-setup" id="repo-setup" style="color: inherit; text-decoration: none;">
+  <h3>Repo Setup</h3>
 </a>
-<p>To run the demos, you must clone this repo <strong>recursively</strong>.</p>
-<pre><code><span class="hl-0">git</span><span class="hl-1"> </span><span class="hl-0">clone</span><span class="hl-1"> </span><span class="hl-14">https</span><span class="hl-1">:</span><span class="hl-2">//github.com/@nativescript-community/universal-links.git --recursive</span>
+<p>The repo uses submodules. If you did not clone with <code> --recursive</code> then you need to call</p>
+<pre><code><span class="hl-3">git</span><span class="hl-1"> </span><span class="hl-3">submodule</span><span class="hl-1"> </span><span class="hl-3">update</span><span class="hl-1"> --</span><span class="hl-3">init</span>
 </code></pre>
-<p><strong>Install Dependencies:</strong></p>
-<pre><code class="language-bash"><span class="hl-1">npm i </span><span class="hl-2"># or &#39;yarn install&#39; or &#39;pnpm install&#39;</span>
-</code></pre>
+<p>The package manager used to install and link dependencies must be <code>pnpm</code> or <code>yarn</code>. <code>npm</code> wont work.</p>
+<p>To develop and test:
+if you use <code>yarn</code> then run <code>yarn</code>
+if you use <code>pnpm</code> then run <code>pnpm i</code></p>
 <p><strong>Interactive Menu:</strong></p>
 <p>To start the interactive menu, run <code>npm start</code> (or <code>yarn start</code> or <code>pnpm start</code>). This will list all of the commonly used scripts.</p>
 
-<a href="#build-1" id="build-1" style="color: inherit; text-decoration: none;">
+<a href="#build" id="build" style="color: inherit; text-decoration: none;">
   <h3>Build</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-1">npm run build</span><br/><br/><span class="hl-1">npm run build.angular </span><span class="hl-2"># or for Angular</span>
+<pre><code class="language-bash"><span class="hl-1">npm run build.all</span>
 </code></pre>
 
-<a href="#demos-1" id="demos-1" style="color: inherit; text-decoration: none;">
+<a href="#demos" id="demos" style="color: inherit; text-decoration: none;">
   <h3>Demos</h3>
 </a>
-<pre><code class="language-bash"><span class="hl-1">npm run demo.[ng|react|svelte|vue].[ios|android]</span><br/><br/><span class="hl-1">npm run demo.svelte.ios </span><span class="hl-2"># Example</span>
+<pre><code class="language-bash"><span class="hl-1">npm run demo.[ng|react|svelte|vue].[ios|android]</span><br/><br/><span class="hl-1">npm run demo.svelte.ios </span><span class="hl-8"># Example</span>
+</code></pre>
+<p><a href="#contributing"></a></p>
+<p><a href="#contributing"></a></p>
+
+<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+  <h2>Contributing</h2>
+</a>
+
+<a href="#update-repo" id="update-repo" style="color: inherit; text-decoration: none;">
+  <h3>Update repo</h3>
+</a>
+<p>You can update the repo files quite easily</p>
+<p>First update the submodules</p>
+<pre><code class="language-bash"><span class="hl-1">npm run update</span>
+</code></pre>
+<p>Then commit the changes
+Then update common files</p>
+<pre><code class="language-bash"><span class="hl-1">npm run sync</span>
+</code></pre>
+<p>Then you can run <code>yarn|pnpm</code>, commit changed files if any</p>
+
+<a href="#update-readme" id="update-readme" style="color: inherit; text-decoration: none;">
+  <h3>Update readme</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-1">npm run readme</span>
+</code></pre>
+
+<a href="#update-doc" id="update-doc" style="color: inherit; text-decoration: none;">
+  <h3>Update doc</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-1">npm run doc</span>
+</code></pre>
+
+<a href="#publish" id="publish" style="color: inherit; text-decoration: none;">
+  <h3>Publish</h3>
+</a>
+<p>The publishing is completely handled by <code>lerna</code> (you can add <code>-- --bump major</code> to force a major release)
+Simply run </p>
+<pre><code class="language-shell"><span class="hl-1">npm run publish</span>
 </code></pre>
 <p><a href="#questions"></a></p>
 <p><a href="#questions"></a></p>
@@ -266,6 +244,7 @@ Add this code to your <code>App_Resources/Android/src/main/AndroidManifest.xml</
 <h4 class="uppercase">Member Visibility</h4><form>
 <ul id="tsd-filter-options">
 <li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
 <li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li></ul></form></div>
 <div class="tsd-theme-toggle">
 <h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
@@ -276,14 +255,7 @@ Add this code to your <code>App_Resources/Android/src/main/AndroidManifest.xml</
 <ul>
 <li class="current selected"><a href="modules.html">@nativescript-<wbr/>community/universal-<wbr/>links</a>
 <ul></ul></li></ul></div></details></nav>
-<nav class="tsd-navigation secondary menu-sticky">
-<ul>
-<li class="tsd-kind-type-alias"><a href="types/AppCallback.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-4194304-path"></rect><path d="M11.31 16V8.224H8.91V7.24H14.79V8.224H12.39V16H11.31Z" fill="var(--color-text)" id="icon-4194304-text"></path></svg>App<wbr/>Callback</a></li>
-<li class="tsd-kind-function"><a href="functions/callback.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-function)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-64-path"></rect><path d="M9.39 16V7.24H14.55V8.224H10.446V11.128H14.238V12.112H10.47V16H9.39Z" fill="var(--color-text)" id="icon-64-text"></path></svg>callback</a></li>
-<li class="tsd-kind-function"><a href="functions/getRegisteredCallback.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>get<wbr/>Registered<wbr/>Callback</a></li>
-<li class="tsd-kind-function"><a href="functions/getUniversalLink.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>get<wbr/>Universal<wbr/>Link</a></li>
-<li class="tsd-kind-function"><a href="functions/registerUniversalLinkCallback.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>register<wbr/>Universal<wbr/>Link<wbr/>Callback</a></li>
-<li class="tsd-kind-function"><a href="functions/setUniversalLink.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>set<wbr/>Universal<wbr/>Link</a></li></ul></nav></div></div>
+<nav class="tsd-navigation secondary menu-sticky"></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div><script src="assets/main.js"></script></body></html>
