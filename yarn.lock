@@ -2192,9 +2192,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nativescript-community/plugin-seed-tools@file:tools::locator=%40nativescript-community%2Funiversal-links%40workspace%3A.":
+"@nativescript-community/plugin-seed-tools@file:tools::locator=root-workspace-0b6124%40workspace%3A.":
   version: 1.0.0
-  resolution: "@nativescript-community/plugin-seed-tools@file:tools#tools::hash=7bfa34&locator=%40nativescript-community%2Funiversal-links%40workspace%3A."
+  resolution: "@nativescript-community/plugin-seed-tools@file:tools#tools::hash=413ced&locator=root-workspace-0b6124%40workspace%3A."
   dependencies:
     "@angular/animations": ~14.2.12
     "@angular/common": ~14.2.12
@@ -2252,17 +2252,37 @@ __metadata:
     vue: ~2.6.14
     yargs: ^17.6.2
     zone.js: ~0.12.0
-  checksum: 9dea10fa7628ca6fd9283ed2a3d9142e2b63fc734ab3e3e1371975275168b5ab88d6b15d08a47e9a53f9125f087e643c42a5a365e9632d1d7f0b6d3918bf7957
+  checksum: 9f290a9ac84ce1caa587a6a6de66bde20bdf699c426571550fee0dc7a6b620f1997f60ff20a2f5019faa5c5f7cec5ec025d44c0a962ad373800b56b6cffedc57
   languageName: node
   linkType: hard
 
-"@nativescript-community/universal-links@workspace:.":
+"@nativescript-community/template-snippet@0.0.1, @nativescript-community/template-snippet@workspace:demo-snippets":
   version: 0.0.0-use.local
-  resolution: "@nativescript-community/universal-links@workspace:."
+  resolution: "@nativescript-community/template-snippet@workspace:demo-snippets"
   dependencies:
-    "@nativescript-community/plugin-seed-tools": "file:tools"
+    "@nativescript-community/universal-links": "file:../packages/universal-links"
   languageName: unknown
   linkType: soft
+
+"@nativescript-community/universal-links@file:../packages/universal-links::locator=%40nativescript-community%2Ftemplate-snippet%40workspace%3Ademo-snippets":
+  version: 3.0.0
+  resolution: "@nativescript-community/universal-links@file:../packages/universal-links#../packages/universal-links::hash=11ce06&locator=%40nativescript-community%2Ftemplate-snippet%40workspace%3Ademo-snippets"
+  checksum: f2fd2e038806d9fbd5b75103cd92be9f1f91db7eda70442df884c2aba8d338d6e6e102e2f98f82288f158d8f75bb930f1330ecbba043207a17d0b8a875d06230
+  languageName: node
+  linkType: hard
+
+"@nativescript-community/universal-links@workspace:packages/universal-links":
+  version: 0.0.0-use.local
+  resolution: "@nativescript-community/universal-links@workspace:packages/universal-links"
+  languageName: unknown
+  linkType: soft
+
+"@nativescript/android@npm:~8.4.0":
+  version: 8.4.0
+  resolution: "@nativescript/android@npm:8.4.0"
+  checksum: 15575d82c03f94f2c31cfd15b9f4569a3b825f9c979927c5fa30bd1323892cc3bc233ac825cdb7d54bd0abd46c8670f7e4fa6ea1834ee342754b3a43bf1d2fd6
+  languageName: node
+  linkType: hard
 
 "@nativescript/angular@npm:~14.2.8":
   version: 14.2.8
@@ -2312,6 +2332,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nativescript/ios@npm:8.4.0":
+  version: 8.4.0
+  resolution: "@nativescript/ios@npm:8.4.0"
+  checksum: d760f2b99b3c5f0eeb15109c4e9c68c36c81b1598bd601421b3af5ac3802dded1272199d5651b44bde991cde9961afe39e7668777bee4a458e76c4bd781d8aec
+  languageName: node
+  linkType: hard
+
+"@nativescript/template-blank-vue-ts@workspace:demo-vue":
+  version: 0.0.0-use.local
+  resolution: "@nativescript/template-blank-vue-ts@workspace:demo-vue"
+  dependencies:
+    "@nativescript-community/template-snippet": 0.0.1
+    "@nativescript/android": ~8.4.0
+    "@nativescript/core": ~8.4.1
+    "@nativescript/ios": 8.4.0
+    "@nativescript/theme": ~3.0.2
+    "@nativescript/types": ~8.4.0
+    "@nativescript/webpack": 5.0.12
+    "@types/node": ~18.11.15
+    nativescript-vue: ~2.9.3
+    nativescript-vue-template-compiler: ~2.9.3
+    typescript: ~4.8.4
+    vue: ~2.6.14
+  languageName: unknown
+  linkType: soft
+
+"@nativescript/theme@npm:~3.0.2":
+  version: 3.0.2
+  resolution: "@nativescript/theme@npm:3.0.2"
+  checksum: ea3307861e8d9bbec2babf5bcc2e9f880549cfee98b0fe68b77eeb81a1baff90b8ee4854fb4c7474d1fab0186e30dee426073f8b62720194ac6a9665247db0fc
+  languageName: node
+  linkType: hard
+
 "@nativescript/types-android@npm:~8.4.0":
   version: 8.4.0
   resolution: "@nativescript/types-android@npm:8.4.0"
@@ -2326,7 +2379,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nativescript/webpack@npm:~5.0.12":
+"@nativescript/types@npm:~8.4.0":
+  version: 8.4.0
+  resolution: "@nativescript/types@npm:8.4.0"
+  dependencies:
+    "@nativescript/types-android": ~8.4.0
+    "@nativescript/types-ios": ~8.4.0
+  checksum: 9f663819b19067745fc382f7724b6ac7c9ead097e57ef2ebef3ec13d964044e50f4b8c5cf173f8efd91ec88072db3c074eee809825bb492cd523bbf8305c5992
+  languageName: node
+  linkType: hard
+
+"@nativescript/webpack@npm:5.0.12, @nativescript/webpack@npm:~5.0.12":
   version: 5.0.12
   resolution: "@nativescript/webpack@npm:5.0.12"
   dependencies:
@@ -3099,7 +3162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:~18.11.15":
   version: 18.11.18
   resolution: "@types/node@npm:18.11.18"
   checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
@@ -5611,6 +5674,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"de-indent@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "de-indent@npm:1.0.2"
+  checksum: 8deacc0f4a397a4414a0fc4d0034d2b7782e7cb4eaf34943ea47754e08eccf309a0e71fa6f56cc48de429ede999a42d6b4bca761bf91683be0095422dbf24611
+  languageName: node
+  linkType: hard
+
 "debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
@@ -7944,6 +8014,15 @@ __metadata:
   version: 1.0.2
   resolution: "hash-sum@npm:1.0.2"
   checksum: 268553ba6c84333f502481d101a7d65cd39f61963544f12fc3ce60264718f471796dbc37348cee08c5529f04fafeba041886a4d35721e34d6440a48a42629283
+  languageName: node
+  linkType: hard
+
+"he@npm:^1.1.0":
+  version: 1.2.0
+  resolution: "he@npm:1.2.0"
+  bin:
+    he: bin/he
+  checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
   languageName: node
   linkType: hard
 
@@ -10654,6 +10733,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nativescript-vue-template-compiler@npm:~2.9.3":
+  version: 2.9.3
+  resolution: "nativescript-vue-template-compiler@npm:2.9.3"
+  dependencies:
+    de-indent: ^1.0.2
+    he: ^1.1.0
+  checksum: 06831590dc8f1f7d3168fbecdb1f2beeb396c97fe7b26be0f442cc53f2b92e9bee8cac601d5de7d16814a72691512cacc106874baa72b3f1366ecc0ddcdd2478
+  languageName: node
+  linkType: hard
+
 "nativescript-vue@npm:~2.9.3":
   version: 2.9.3
   resolution: "nativescript-vue@npm:2.9.3"
@@ -13123,6 +13212,14 @@ __metadata:
   checksum: 6a2bf167b3587d4df709b37d149ad0300692cc5deb510f89ac7bdc77c8738c9546ae3de9322b0968e1ed2b0e984571f5f55aae28fa7de4cfcb1bc5402a4e2be6
   languageName: node
   linkType: hard
+
+"root-workspace-0b6124@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root-workspace-0b6124@workspace:."
+  dependencies:
+    "@nativescript-community/plugin-seed-tools": "file:tools"
+  languageName: unknown
+  linkType: soft
 
 "run-async@npm:^2.3.0, run-async@npm:^2.4.0":
   version: 2.4.1
