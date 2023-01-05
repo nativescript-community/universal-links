@@ -21,7 +21,7 @@
         "demo.vue.clean": "cd ./demo-vue && ns clean",
         "demo.vue.ios": "cd ./demo-vue && ns run ios --no-hmr --env.watchNodeModules",
         "postinstall": "npm run setup",
-        "readme": "node ./tools/readme.js",
+        "readme": "lerna run readme && node ./tools/readme.js",
         "start": "./node_modules/.bin/ntl -A -s 15 -o",
         "submodules": "git submodule update --init",
         "sync": "node ./tools/sync.js",
