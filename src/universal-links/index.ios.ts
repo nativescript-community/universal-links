@@ -1,7 +1,7 @@
 import { Application } from '@nativescript/core';
 import { getRegisteredCallback, getUniversalLink, setUniversalLink } from './index-common';
 
-export { getUniversalLink, registerUniversalLinkCallback } from './index-common';
+export { setUniversalLink, getUniversalLink, registerUniversalLinkCallback } from './index-common';
 
 @NativeClass()
 class CustomUIApplicationDelegate extends UIResponder implements UIApplicationDelegate {
