@@ -4,7 +4,7 @@ import { getRegisteredCallback, getUniversalLink, setUniversalLink } from './ind
 export { setUniversalLink, getUniversalLink, registerUniversalLinkCallback } from './index-common';
 
 @NativeClass()
-class CustomUIApplicationDelegate extends UIResponder implements UIApplicationDelegate {
+class CustomUIApplicationDelegate extends UIResponder {
     public static ObjCProtocols = [UIApplicationDelegate];
 }
 
