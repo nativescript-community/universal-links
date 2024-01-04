@@ -157,7 +157,7 @@ You can simulate universal links to debug within your app
 ### iOS
 
 ```shell
-xcrun simctl openurl booted *your link*
+xcrun simctl openurl booted "*your link*"
 ```
 
 ### Android
