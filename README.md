@@ -79,6 +79,9 @@ function parseLink(link: string) {
 	* [iOS](#ios)
 	* [Android](#android)
 * [Usage](#usage)
+* [Debugging](#debugging)
+	* [iOS](#ios-1)
+	* [Android](#android-1)
 * [Demos and Development](#demos-and-development)
 	* [Repo Setup](#repo-setup)
 	* [Build](#build)
@@ -228,6 +231,26 @@ import { getUniversalLink } from "nativescript-plugin-universal-links";
 const ul = getUniversalLink();
 ```
 
+[](#debugging)
+
+
+[](#debugging)
+
+## Debugging
+
+You can simulate universal links to debug within your app
+
+### iOS
+
+```shell
+xcrun simctl openurl booted *your link*
+```
+
+### Android
+
+```shell
+adb shell am start -d "*your link*"
+``````
 
 
 [](#demos-and-development)

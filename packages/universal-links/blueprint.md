@@ -150,7 +150,21 @@ import { getUniversalLink } from "nativescript-plugin-universal-links";
 
 const ul = getUniversalLink();
 ```
+## Debugging
 
+You can simulate universal links to debug within your app
+
+### iOS
+
+```shell
+xcrun simctl openurl booted *your link*
+```
+
+### Android
+
+```shell
+adb shell am start -d "*your link*"
+``````
 
 {{ load:../../tools/readme/demos-and-development.md }}
 {{ load:../../tools/readme/questions.md }}
