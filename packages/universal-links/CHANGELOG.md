@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [3.0.1](https://github.com/nativescript-community/universal-links/compare/v3.0.0...v3.0.1) (2023-05-31)
+## [3.0.2](https://github.com/nativescript-community/universal-links/compare/v3.0.1...v3.0.2) (2026-04-14)
 
 **Note:** Version bump only for package @nativescript-community/universal-links
 
+## [3.0.1](https://github.com/nativescript-community/universal-links/compare/v3.0.0...v3.0.1) (2023-05-31)
 
-
-
+**Note:** Version bump only for package @nativescript-community/universal-links
 
 # [3.0.0](https://github.com/nativescript-community/universal-links/compare/v2.0.7...v3.0.0) (2022-05-11)
 

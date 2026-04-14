@@ -3,13 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/nativescript-community/universal-links/compare/v3.0.1...v3.0.2) (2026-04-14)
+
+### Bug Fixes
+
+* android getUniversalLinkIntent ([03ed0ec](https://github.com/nativescript-community/universal-links/commit/03ed0ec38636dec637f40344e3ba0b4aa3007d8b))
+
 ## [3.0.1](https://github.com/nativescript-community/universal-links/compare/v3.0.0...v3.0.1) (2023-05-31)
 
 **Note:** Version bump only for package universal-links
-
-
-
-
 
 # [3.0.0](https://github.com/nativescript-community/universal-links/compare/v2.0.7...v3.0.0) (2022-05-11)
 
