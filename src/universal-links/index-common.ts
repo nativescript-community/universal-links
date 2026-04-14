@@ -8,7 +8,7 @@ export function getUniversalLink() {
     return universalLink;
 }
 
-export type AppCallback = (link: string) => void;
+export type AppCallback = (link: string, intent?) => void;
 export let callback: AppCallback | undefined;
 export function registerUniversalLinkCallback(cb: AppCallback) {
     callback = cb;
