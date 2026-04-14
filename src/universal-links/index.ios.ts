@@ -11,13 +11,13 @@ class CustomUIApplicationDelegate extends UIResponder {
 // setup app delegate
 let delegate = Application.ios.delegate;
 if (!delegate) {
-    delegate = Application.ios.delegate = CustomUIApplicationDelegate;
+    delegate = Application.ios.delegate = CustomUIApplicationDelegate as any;
 }
 
 /**
  * Add delegate method handler, but also preserve any existing one.
  */
-function addDelegateHandler(classRef: Function, methodName: string, handler: Function) {
+function addDelegateHandler(classRef: any, methodName: string, handler: Function) {
     const crtHandler = classRef.prototype[methodName];
     classRef.prototype[methodName] = function () {
         const args = Array.from(arguments);

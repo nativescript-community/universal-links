@@ -8,7 +8,7 @@ export function getUniversalLinkIntent() {
     return currentIntent;
 }
 
-Application.android.on(AndroidApplication.activityNewIntentEvent, (args) => {
+Application.android.on(Application.android.activityNewIntentEvent, (args) => {
     const intent: android.content.Intent = args.activity.getIntent();
     try {
         const data = intent.getData();
@@ -26,7 +26,7 @@ Application.android.on(AndroidApplication.activityNewIntentEvent, (args) => {
     }
 });
 
-Application.android.on(AndroidApplication.activityDestroyedEvent, (args) => {
+Application.android.on(Application.android.activityDestroyedEvent, (args) => {
     const intent: android.content.Intent = args.activity.getIntent();
     const data = intent.getData();
 

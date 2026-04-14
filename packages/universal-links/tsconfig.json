@@ -8,5 +8,5 @@
             "tns-core-modules/*": ["./node_modules/@nativescript/core/*"]
 	    }
 	},
-	"include": ["../../src/universal-links/**/*.ts", "../../references.d.ts", "../../src/references.d.ts"],
+	"include": ["../../src/universal-links/**/*.ts", "../../references.d.ts", "../../tools/references.d.ts", "../../src/references.d.ts"],
 }
